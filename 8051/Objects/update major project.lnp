@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\update major program.obj" 
+TO ".\Objects\update major project" 
+PRINT(".\Listings\update major project.m51")

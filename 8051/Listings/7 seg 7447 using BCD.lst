@@ -1,0 +1,45 @@
+C51 COMPILER V9.60.0.0   7_SEG_7447_USING_BCD                                              12/03/2022 17:34:46 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE 7_SEG_7447_USING_BCD
+OBJECT MODULE PLACED IN .\Objects\7 seg 7447 using BCD.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 7 seg 7447 using BCD.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT
+                    -(.\Listings\7 seg 7447 using BCD.lst) TABS(2) OBJECT(.\Objects\7 seg 7447 using BCD.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          
+   3          void main()
+   4          { 
+   5   1        unsigned char seg[]={0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09};
+   6   1        unsigned char x;
+   7   1        unsigned int i;
+   8   1        
+   9   1        P0=0x00;
+  10   1        
+  11   1        while(1)
+  12   1        { 
+  13   2          for(x=0; x<10; x++)
+  14   2          { 
+  15   3            P0=seg[x];
+  16   3            
+  17   3            for(i=0; i<60000; i++);
+  18   3          
+  19   3          } 
+  20   2        }
+  21   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     73    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

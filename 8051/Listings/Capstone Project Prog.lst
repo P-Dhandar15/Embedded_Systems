@@ -1,0 +1,92 @@
+C51 COMPILER V9.60.0.0   CAPSTONE_PROJECT_PROG                                             03/05/2022 21:35:55 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE CAPSTONE_PROJECT_PROG
+OBJECT MODULE PLACED IN .\Objects\Capstone Project Prog.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Capstone Project Prog.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRIN
+                    -T(.\Listings\Capstone Project Prog.lst) TABS(2) OBJECT(.\Objects\Capstone Project Prog.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          void delay();
+   4          
+   5          sbit sm=P0^7;                //Port 0 pin 7= Soil moisture
+   6          
+   7          sbit rs=P0^3;               //Port 0 pin 3= Rain sensor
+   8          
+   9          sbit esp_motor=P2^0;        //Port 2 Pin 0= ESP_data pin input
+  10          
+  11          sbit esp_cont=P2^2;         //Port 2 pin 2= Aoto/Manual control signal
+  12          
+  13          sbit rsout=P2^4;            //Port 2 pin 4= Rain sensor to Esp
+  14          
+  15          sbit motor=P1^1;            //Port 1 Pin 1= Motor output 
+  16          
+  17          //----------------------------------------------------------------------------
+  18          
+  19          void main()
+  20          {
+  21   1       while(1)
+  22   1       {
+  23   2        if(esp_cont == 1)             //esp_data
+  24   2        { 
+  25   3          esp_motor = 0;
+  26   3            
+  27   3            if(sm == 1)               //Soil moisture 
+  28   3            {
+  29   4              motor=1;    } }
+  30   2      
+  31   2         
+  32   2        
+  33   2          else if(esp_cont == 0)      //esp_data
+  34   2        {
+  35   3          if(esp_motor == 1)
+  36   3          {
+  37   4            motor=1;    } }
+  38   2         
+  39   2        
+  40   2        else if(rs == 0)            //Rain sensor
+  41   2        {
+  42   3          motor=0;  
+  43   3          rsout=1;   }
+  44   2      
+  45   2          else                      //else off
+  46   2        {
+  47   3          motor=0; 
+  48   3          rsout=0;    }
+  49   2        
+  50   2        delay();                  //10 us delay
+  51   2       }
+  52   1      }
+  53          
+  54          //--------------------------------------------------
+C51 COMPILER V9.60.0.0   CAPSTONE_PROJECT_PROG                                             03/05/2022 21:35:55 PAGE 2   
+
+  55          
+  56          void delay()
+  57          {
+  58   1       TMOD= 0x01;
+  59   1       TH0 = 0xFF;
+  60   1       TL0 = 0xF6;          // 10 us delay
+  61   1       TR0 = 1;
+  62   1        
+  63   1       while(TF0==0);
+  64   1       TR0 =0;
+  65   1       TF0 =0;
+  66   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     59    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

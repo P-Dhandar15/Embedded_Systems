@@ -1,0 +1,76 @@
+C51 COMPILER V9.60.0.0   UPDATE_MAJOR_PROGRAM                                              04/16/2022 19:56:32 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE UPDATE_MAJOR_PROGRAM
+OBJECT MODULE PLACED IN .\Objects\update major program.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE update major program.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT
+                    -(.\Listings\update major program.lst) TABS(2) OBJECT(.\Objects\update major program.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          void delay();
+   4          
+   5          sbit sm=P0^7;                //Port 0 pin 7= Soil moisture
+   6          
+   7          sbit rs=P0^3;               //Port 0 pin 3= Rain sensor
+   8          
+   9          sbit motor=P1^1;            //Port 1 Pin 1= Motor output 
+  10          
+  11          //----------------------------------------------------------------------------
+  12          
+  13          void main()
+  14          {
+  15   1       while(1)
+  16   1       {  
+  17   2         if(sm == 1)
+  18   2         {
+  19   3           motor=1;
+  20   3         }
+  21   2         else if(sm == 0)
+  22   2         {
+  23   3            motor=0;
+  24   3         }
+  25   2         else 
+  26   2         { 
+  27   3           motor=0;
+  28   3         }
+  29   2      
+  30   2          while(rs == 0)
+  31   2          {
+  32   3            motor = 0;
+  33   3          }
+  34   2         
+  35   2         delay();
+  36   2       }
+  37   1      }
+  38          
+  39          void delay()
+  40          {
+  41   1       TMOD = 0x01;
+  42   1       TH0 = 0xFF;
+  43   1       TL0 = 0xF6;          // 10 us delay
+  44   1       TR0 = 1;
+  45   1        
+  46   1       while(TF0==0);
+  47   1       TR0 =0;
+  48   1       TF0 =0;
+  49   1      }
+  50              
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     40    ----
+C51 COMPILER V9.60.0.0   UPDATE_MAJOR_PROGRAM                                              04/16/2022 19:56:32 PAGE 2   
+
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

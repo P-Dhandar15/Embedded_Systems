@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\Capstone Project Prog.obj" 
+TO ".\Objects\Capstone Project Prog" 
+PRINT(".\Listings\Capstone Project Prog.m51")

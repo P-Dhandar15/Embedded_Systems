@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\dot mat.obj" 
+TO ".\Objects\dot mat" 
+PRINT(".\Listings\dot mat.m51")

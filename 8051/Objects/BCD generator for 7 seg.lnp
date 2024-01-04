@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\BCD generator for 7 seg.obj" 
+TO ".\Objects\BCD generator for 7 seg" 
+PRINT(".\Listings\BCD generator for 7 seg.m51")

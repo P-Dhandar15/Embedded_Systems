@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\7 seg 7447 using BCD.obj" 
+TO ".\Objects\7 seg 7447 using BCD" 
+PRINT(".\Listings\7 seg 7447 using BCD.m51")

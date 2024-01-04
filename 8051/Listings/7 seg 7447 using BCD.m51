@@ -1,0 +1,137 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/03/2022  17:34:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\7 seg 7447 using BCD.obj TO .\Objects\7 seg 7447 using BCD 
+>> PRINT (.\Listings\7 seg 7447 using BCD.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\7 seg 7447 using BCD.obj (7_SEG_7447_USING_BCD)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  .\Objects\7 seg 7447 using BCD (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000BH     UNIT         _DATA_GROUP_
+            IDATA   0013H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     010CH     UNIT         ?C?LIB_CODE
+            CODE    090CH     0049H     UNIT         ?PR?MAIN?7_SEG_7447_USING_BCD
+            CODE    0955H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0961H     000AH     UNIT         ?CO?7_SEG_7447_USING_BCD
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\7 seg 7447 using BCD (?C_STARTUP)
+
+
+SEGMENT                                 DATA_GROUP 
+  +--> CALLED SEGMENT                 START    LENGTH
+-----------------------------------------------------
+?C_C51STARTUP                         -----    -----
+  +--> ?PR?MAIN?7_SEG_7447_USING_BCD
+
+?PR?MAIN?7_SEG_7447_USING_BCD         0008H    000BH
+  +--> ?CO?7_SEG_7447_USING_BCD
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\7 seg 7447 using BCD (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0955H         SEGMENT       ?C_C51STARTUP
+  I:0013H         SEGMENT       ?STACK
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/03/2022  17:34:46  PAGE 2
+
+
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0958H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0955H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0955H         LINE#         133
+  C:0957H         LINE#         134
+  C:0958H         LINE#         135
+  C:0959H         LINE#         136
+  C:095BH         LINE#         185
+  C:095EH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        7_SEG_7447_USING_BCD
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:090CH         PUBLIC        main
+  C:0961H         SYMBOL        _?ix1000
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        seg
+  D:0012H         SYMBOL        x
+  D:0082H         SYMBOL        i
+  -------         ENDDO         
+  C:090CH         LINE#         3
+  C:090CH         LINE#         4
+  C:090CH         LINE#         5
+  C:091FH         LINE#         9
+  C:0922H         LINE#         11
+  C:0922H         LINE#         12
+  C:0922H         LINE#         13
+  C:0930H         LINE#         14
+  C:0930H         LINE#         15
+  C:0938H         LINE#         17
+  C:0951H         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        7_SEG_7447_USING_BCD
+
+  -------         MODULE        ?C?COPY
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/03/2022  17:34:46  PAGE 3
+
+
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?SLCMP
+  C:08F6H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0062H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=20.0 xdata=0 code=366
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
