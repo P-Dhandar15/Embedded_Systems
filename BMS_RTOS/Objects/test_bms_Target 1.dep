@@ -1,0 +1,10 @@
+Dependencies for Project 'test_bms', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x559CFDE8)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips--pd "__UVISION_VERSION SETA 525"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (.\test_xx.c)(0x654295E0)(--c99 --gnu -c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Philips-D__UVISION_VERSION="525"-o .\objects\test_xx.o --omf_browse .\objects\test_xx.crf --depend .\objects\test_xx.d)
+I (C:\Keil_v5\ARM\INC\Philips\LPC214x.h)(0x559CFE30)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EF054)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EF054)
+I (LCD.h)(0x653FFCE4)
+I (ADC.h)(0x65401DBA)
+F (.\ADC.h)(0x65401DBA)()
+F (.\LCD.h)(0x653FFCE4)()
