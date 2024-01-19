@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Pranav Dhandar, VIT, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARM.DLL V5.25.2.0
+Dialog DLL:      DARMP.DLL V1.53.0.0
+Target DLL:      UL2ARM.DLL V1.74.10.0
+Dialog DLL:      TARMP.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+E:\CODE_n_ELECTRONICS\ELECTRONICS_main\KEIL\ESD Projects\Smart Road n Transport project\simple_no_RTOS.uvproj
+Project File Date:  01/12/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling simple_no_RTOS.c...
+LCD.h(20): warning:  #1295-D: Deprecated declaration LCD1init - give arg types
+  void LCD1init();
+LCD.h(24): warning:  #1295-D: Deprecated declaration LCD2init - give arg types
+  void LCD2init();
+ADC.h(19): warning:  #61-D: integer operation result is out of range
+  	while( (AD0GDR & (0x01 << 31)) == 0 );
+ADC.h(19): warning:  #68-D: integer conversion resulted in a change of sign
+  	while( (AD0GDR & (0x01 << 31)) == 0 );
+simple_no_RTOS.c(61): warning:  #61-D: integer operation result is out of range
+  		IOSET1 = IOSET1 | (1 << 31);	// Yellow 1
+simple_no_RTOS.c(61): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOSET1 = IOSET1 | (1 << 31);	// Yellow 1
+simple_no_RTOS.c(80): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 27) | (1 << 26);
+simple_no_RTOS.c(80): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 27) | (1 << 26);
+simple_no_RTOS.c(95): warning:  #61-D: integer operation result is out of range
+  		IOSET1 = IOSET1 | (1 << 31);	// Yellow 1
+simple_no_RTOS.c(95): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOSET1 = IOSET1 | (1 << 31);	// Yellow 1
+simple_no_RTOS.c(114): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 27) | (1 << 26);
+simple_no_RTOS.c(114): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 27) | (1 << 26);
+simple_no_RTOS.c(126): warning:  #61-D: integer operation result is out of range
+  		IOSET1 = IOSET1 | (1 << 31) | (1 << 29) ;	// yellow.1
+simple_no_RTOS.c(126): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOSET1 = IOSET1 | (1 << 31) | (1 << 29) ;	// yellow.1
+simple_no_RTOS.c(142): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 28) | (1 << 27) ;
+simple_no_RTOS.c(142): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 28) | (1 << 27) ;
+simple_no_RTOS.c(156): warning:  #61-D: integer operation result is out of range
+  		IOSET1 = IOSET1 | (1 << 29) | (1 << 31);	// yellow.2
+simple_no_RTOS.c(156): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOSET1 = IOSET1 | (1 << 29) | (1 << 31);	// yellow.2
+simple_no_RTOS.c(172): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 26);
+simple_no_RTOS.c(172): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 26);
+simple_no_RTOS.c(190): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 28) ;
+simple_no_RTOS.c(190): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 28) ;
+simple_no_RTOS.c(18): warning:  #177-D: variable "speed"  was declared but never referenced
+  	unsigned int LDR, pir1, pir2, pir3, pir4, speed;
+simple_no_RTOS.c(19): warning:  #177-D: variable "LDRstr"  was declared but never referenced
+  	unsigned char LDRstr[10], SPEEDstr[10];
+simple_no_RTOS.c(19): warning:  #177-D: variable "SPEEDstr"  was declared but never referenced
+  	unsigned char LDRstr[10], SPEEDstr[10];
+simple_no_RTOS.c(273): warning:  #1-D: last line of file ends without a newline
+  */
+simple_no_RTOS.c: 26 warnings, 0 errors
+linking...
+Program Size: Code=3628 RO-data=224 RW-data=0 ZI-data=1256  
+FromELF: creating hex file...
+".\Objects\simple_no_RTOS.axf" - 0 Error(s), 26 Warning(s).
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

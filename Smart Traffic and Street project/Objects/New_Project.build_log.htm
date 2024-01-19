@@ -1,0 +1,85 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Pranav Dhandar, VIT, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARM.DLL V5.25.2.0
+Dialog DLL:      DARMP.DLL V1.53.0.0
+Target DLL:      UL2ARM.DLL V1.74.10.0
+Dialog DLL:      TARMP.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+E:\CODE_n_ELECTRONICS\ELECTRONICS_main\KEIL\ESD Projects\Smart Road n Transport project\New_Project.uvproj
+Project File Date:  12/30/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling heap_2.c...
+compiling list.c...
+assembling portASM.s...
+compiling port.c...
+compiling queue.c...
+queue.c(472): warning:  #177-D: function "prvInitialiseMutex"  was declared but never referenced
+  static void prvInitialiseMutex( Queue_t *pxNewQueue )
+queue.c: 1 warning, 0 errors
+compiling Smart_Road.c...
+LCD.h(10): warning:  #1295-D: Deprecated declaration LCDinit - give arg types
+  void LCDinit();
+ADC.h(19): warning:  #61-D: integer operation result is out of range
+  	while( (AD0GDR & (0x01 << 31)) == 0 );
+ADC.h(19): warning:  #68-D: integer conversion resulted in a change of sign
+  	while( (AD0GDR & (0x01 << 31)) == 0 );
+Smart_Road.c(59): warning:  #61-D: integer operation result is out of range
+  		IOSET1 = IOSET1 | (1 << 31);	// yellow.1
+Smart_Road.c(59): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOSET1 = IOSET1 | (1 << 31);	// yellow.1
+Smart_Road.c(65): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 28) | (1 << 27) | (1 << 26);
+Smart_Road.c(65): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 29) | (1 << 28) | (1 << 27) | (1 << 26);
+Smart_Road.c(70): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 28) | (1 << 27) | (1 << 26);
+Smart_Road.c(70): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 28) | (1 << 27) | (1 << 26);
+Smart_Road.c(75): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 27) | (1 << 26);
+Smart_Road.c(75): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 27) | (1 << 26);
+Smart_Road.c(81): warning:  #61-D: integer operation result is out of range
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 28) ;
+Smart_Road.c(81): warning:  #68-D: integer conversion resulted in a change of sign
+  		IOCLR1 = IOCLR1 | (1 << 31) | (1 << 30) | (1 << 29) | (1 << 28) ;
+Smart_Road.c(83): warning:  #1-D: last line of file ends without a newline
+  }
+Smart_Road.c(17): warning:  #177-D: variable "LDR"  was declared but never referenced
+  	unsigned int LDR, pir1, pir2, pir3, pir4, speed;
+Smart_Road.c(17): warning:  #177-D: variable "speed"  was declared but never referenced
+  	unsigned int LDR, pir1, pir2, pir3, pir4, speed;
+Smart_Road.c(18): warning:  #177-D: variable "LDRstr"  was declared but never referenced
+  	unsigned char LDRstr[10], SPEEDstr[10];
+Smart_Road.c(18): warning:  #177-D: variable "SPEEDstr"  was declared but never referenced
+  	unsigned char LDRstr[10], SPEEDstr[10];
+Smart_Road.c: 18 warnings, 0 errors
+compiling tasks.c...
+linking...
+Program Size: Code=3012 RO-data=136 RW-data=64 ZI-data=1848  
+FromELF: creating hex file...
+".\Objects\New_Project.axf" - 0 Error(s), 19 Warning(s).
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

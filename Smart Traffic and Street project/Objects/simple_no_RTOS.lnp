@@ -1,0 +1,7 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\simple_no_rtos.o"
+--strict --scatter ".\Objects\simple_no_RTOS.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\simple_no_RTOS.map" -o .\Objects\simple_no_RTOS.axf
