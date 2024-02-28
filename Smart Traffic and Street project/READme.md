@@ -6,3 +6,6 @@
     Also, the LDR sensor is used to turn the street light automatically on as soon as the darkness falls.***
 
 * The project is implemented in Keil uVision 5 and the circuit is built on Proteus 8.
+
+Visit the YouTube video for demo :
+https://youtu.be/DbrHqtBFRz8
